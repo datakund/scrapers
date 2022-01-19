@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yelp Review Scraper &mdash; scrapers 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Youtube Data Scrape" href="Youtube%20Data%20Scrape.html" />
+    <link rel="prev" title="Yahoo Ticker Symbol Scraper" href="Yahoo%20Ticker%20Symbol%20Scraper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> scrapers
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to DataKund</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yellow%20Pages%20Business%20Details%20Scraper%20Bot.html">Yellow Pages Business Details Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Instagram%20profile%20Scraper%20Bot.html">Instagram profile Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LinkedIn%20Search%20Results%20Scraper%20Bot.html">LinkedIn Search Results Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Trends%20Scraper%20Bot.html">Google Trends Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reddit%20Post%20Scraper.html">Reddit Post Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Square%20Yards%20Properties%20Scraper%20With%20No%20Input.html">Square Yards Properties Scraper With No Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9%2011%20Victim%20List%20Scraper.html">9/11 Victim List Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coin%20Market%20Cap%20Scraper.html">Coin Market Cap Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="All%20movie%20scraper.html">All movie scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Amazon%20Product%20Price%20Scraper%20Bot.html">Amazon Product Price Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bing%20Search%20Scraper.html">Bing Search Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coindesk%20Price%20Scraper.html">Coindesk Price Scraper with Commodity Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Down%20Detector%20Scraper.html">Down Detector Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Epoch%20Timestamp%20Converter%20Scraper.html">Epoch Timestamp Converter Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Facebook%20Friend%20List%20Scraper%20Bot.html">Facebook Friend List Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gaana%20Scraper.html">Gaana Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="google%20scholar%20scraper.html">Google Scholar Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Search%20Result%20Scraper.html">Google Search Result Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IMDb%20Top%20250%20Movies%20Scraper.html">IMDb Top 250 Movies Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Goodreads%20by%20Keyword%20Scraper.html">Goodreads by Keyword Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Investing_com%20World%20Indices%20Scraper.html">Investing.com World Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trading%20View%20Market%20Indices%20Scraper.html">Trading View Market Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trip%20Advisor%20Reviews%20Scraper.html">Trip Advisor Reviews Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Twitter%20Data%20Scrape.html">Twitter Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20Current%20Events.html">Wikipedia Current Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20GDP%20per%20Capita%20Scraper.html">Wikipedia GDP per Capita Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wordpress%20Blog%20Post%20Scraper.html">Wordpress Blog Post Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Worldometer%20COVID%20Stats%20Scraper.html">Worldometer COVID Stats Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Historical%20Data%20Scraper.html">Yahoo Finance Historical Data Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Scraper.html">Yahoo finance Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Ticker%20Symbol%20Scraper.html">Yahoo Ticker Symbol Scraper</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Yelp Review Scraper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#response-data">Response Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Data%20Scrape.html">Youtube Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Playlist%20Scraper.html">Youtube Playlist Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contactus.html">Contact Us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">scrapers</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Yelp Review Scraper</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Yelp Review Scraper.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="yelp-review-scraper">
+<h1>Yelp Review Scraper<a class="headerlink" href="#yelp-review-scraper" title="Permalink to this headline"></a></h1>
+<p>Scrape Yelp Review from Listing Link</p>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Tm9kZUpT" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Tm9kZUpT" name="Tm9kZUpT" role="tab" tabindex="-1">NodeJS</button><button aria-controls="panel-0-Q3VybA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Q3VybA==" name="Q3VybA==" role="tab" tabindex="-1">Curl</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bot_studio</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">datakund</span> <span class="o">=</span> <span class="n">bot_studio</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">datakund</span><span class="o">.</span><span class="n">yelp_review</span><span class="p">(</span><span class="n">yelp_link</span><span class="o">=</span><span class="s2">&quot;https://www.yelp.com/biz/saffron-grill-san-francisco&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Tm9kZUpT" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Tm9kZUpT" name="Tm9kZUpT" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">datakund</span><span class="o">=</span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;datakund&quot;</span><span class="p">)</span>
+<span class="nx">datakund</span><span class="p">.</span><span class="nx">yelp_review</span><span class="p">(</span><span class="s2">&quot;https://www.yelp.com/biz/saffron-grill-san-francisco&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Q3VybA==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Q3VybA==" name="Q3VybA==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST http://127.0.0.1:5000/run -H <span class="s1">&#39;cache-control: no-cache&#39;</span> -H <span class="s1">&#39;content-type: application/json&#39;</span> -d <span class="s1">&#39;{&quot;user&quot;:&quot;apiKey&quot;,&quot;bot&quot;:&quot;yelp_review~D75HsPTUIeOmN0bLp5ulrwB7F1f2&quot;,&quot;publicbot&quot;:true,&quot;outputdata&quot;:{&quot;yelp_link&quot;:&quot;https://www.yelp.com/biz/saffron-grill-san-francisco&quot;}}&#39;</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="section" id="response-data">
+<h2>Response Data<a class="headerlink" href="#response-data" title="Permalink to this headline"></a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;Laurel Heights, San Francisco, CA&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;12/21/2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;My partner and I LOVE saffron grill. We used to order takeout from them at least twice a month (and the only reason why we stopped is bc we left sf). It was probably our favorite place in the city. To this day I&#39;ve never had a better fish masala. When/if we ever come back to sf, we&#39;re coming for ya first thing, Saffron Grill!  sincerely, your biggest fans&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review_by&quot;</span><span class="p">:</span> <span class="s2">&quot;Eimi O.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;8/7/2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;Good Indian food! Decent portions and prices are right in the sweet spot, $11 for vegetarian. I feel like a lot of places are $15-$16 so this is a great bang for your buck option. Be aware they don&#39;t give rice so if you want some you&#39;ll have to order it separately. Ordered garlic naan, yellow lentil curry and mixed vegetable curry. All really good with strong flavors. I should&#39;ve asked for spicier. It was very mild when ordering generically off the website.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review_by&quot;</span><span class="p">:</span> <span class="s2">&quot;Isaac A.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;269&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;New York, NY&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;1/6/2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;Saffron Grill has THE best naan in the Bay Area. I also love Saffron&#39;s chicken tikka masala and basmati rice! Definitely a great Indian spot in NoPa!&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review_by&quot;</span><span class="p">:</span> <span class="s2">&quot;Kate E.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;Baton Rouge, LA&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;11/10/2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;I used to love this place years ago. I moved back to sf recently and loved the idea of having a good neighborhood Indian spot nearby. Today was disappointing though. For $28 I ordered just a chicken korma and chicken tikka masala. The sauce for the tikka masala was very watery. The worst part was the chicken in both dishes, many pieces were very hard/chewy. Maybe not properly cooked? Maybe just bad quality? Either way it ruined the whole dish, and we couldn&#39;t even finish it.Sad to have lost what I once a considered a good neighborhood spot, but won&#39;t be going back.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review_by&quot;</span><span class="p">:</span> <span class="s2">&quot;Emily T.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;San Francisco, CA&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;12/23/2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;This is my go to Indian food place in San Francisco. I usually get take out and order the paneer makhni (spicy), naan, and vegetable pakoras. The food is always consistently good and I get it at least once a month. The price is pretty fair as well. 10/10 recommend!&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review_by&quot;</span><span class="p">:</span> <span class="s2">&quot;Jashan K.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;93&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;11/15/2020&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review_by&quot;</span><span class="p">:</span> <span class="s2">&quot;Matt Y.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;25&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;Washington, DC&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2/24/2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review_by&quot;</span><span class="p">:</span> <span class="s2">&quot;Jillian J.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;373&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;7/24/2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;Great food all around. Got samosas, raita, tandoori chicken, lamb curry....picked it up so everything was hot and fresh. Also naan. Will order again.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review_by&quot;</span><span class="p">:</span> <span class="s2">&quot;Jordan C.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;171&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;1/29/2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;So far this is the best Indian food in the city. My hometown is in the south bay and tInhe Indian community is more in abundance down where I am. I&#39;ve gone to like one other place in the city. And it wasn&#39;t bad (I honestly can&#39;t remember too much of it). They didn&#39;t have Butter Chicken on their menu though which is one of my favorite dishes.My boyfriend randomly choose this spot while driving towards his usual Indian spot. And they happened to have not only Chicken Tikka Masala, but Butter Chicken as well. The meat honestly was whatever but the sauces here were some of the best I&#39;ve ever had. Especially that Butter Chicken. Oof. Recommend their Butter Chicken.My boyfriend got the Chicken Vindaloo which was also really great in both of our opinions. (I think he liked my dish a tad bit more so I let him have the rest of my sauce). Their garlic and onion naan were the perfect companions to our dishes. My boyfriend says this place is better than his other normal spot and will be coming back again.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review_by&quot;</span><span class="p">:</span> <span class="s2">&quot;Lilian L.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;160&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;4/18/2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;Ordered the butter chicken and basmati rice with garlic nan and vegetable pakora. I have mixed feelings about my order. I loveeeeed the vegetable pakora and it was so crispy which is my favorite especially when it&#39;s take out. But when I received my order it was still crisp! But... I wasn&#39;t a huge fan of the butter chicken because it was too sweet for me. I will be back to try the chicken tikka masala instead to see how it compares!(:&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;review_by&quot;</span><span class="p">:</span> <span class="s2">&quot;Alissa H.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;reviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;446&quot;</span>
+        <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;resume_variable&quot;</span><span class="p">:</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success_score&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Yahoo%20Ticker%20Symbol%20Scraper.html" class="btn btn-neutral float-left" title="Yahoo Ticker Symbol Scraper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Youtube%20Data%20Scrape.html" class="btn btn-neutral float-right" title="Youtube Data Scrape" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, datakund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reddit Post Scraper &mdash; scrapers 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Square Yards Properties Scraper With No Input" href="Square%20Yards%20Properties%20Scraper%20With%20No%20Input.html" />
+    <link rel="prev" title="Google Trends Scraper Bot" href="Google%20Trends%20Scraper%20Bot.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> scrapers
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to DataKund</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yellow%20Pages%20Business%20Details%20Scraper%20Bot.html">Yellow Pages Business Details Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Instagram%20profile%20Scraper%20Bot.html">Instagram profile Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LinkedIn%20Search%20Results%20Scraper%20Bot.html">LinkedIn Search Results Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Trends%20Scraper%20Bot.html">Google Trends Scraper Bot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reddit Post Scraper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#response-data">Response Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Square%20Yards%20Properties%20Scraper%20With%20No%20Input.html">Square Yards Properties Scraper With No Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9%2011%20Victim%20List%20Scraper.html">9/11 Victim List Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coin%20Market%20Cap%20Scraper.html">Coin Market Cap Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="All%20movie%20scraper.html">All movie scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Amazon%20Product%20Price%20Scraper%20Bot.html">Amazon Product Price Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bing%20Search%20Scraper.html">Bing Search Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coindesk%20Price%20Scraper.html">Coindesk Price Scraper with Commodity Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Down%20Detector%20Scraper.html">Down Detector Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Epoch%20Timestamp%20Converter%20Scraper.html">Epoch Timestamp Converter Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Facebook%20Friend%20List%20Scraper%20Bot.html">Facebook Friend List Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gaana%20Scraper.html">Gaana Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="google%20scholar%20scraper.html">Google Scholar Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Search%20Result%20Scraper.html">Google Search Result Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IMDb%20Top%20250%20Movies%20Scraper.html">IMDb Top 250 Movies Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Goodreads%20by%20Keyword%20Scraper.html">Goodreads by Keyword Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Investing_com%20World%20Indices%20Scraper.html">Investing.com World Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trading%20View%20Market%20Indices%20Scraper.html">Trading View Market Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trip%20Advisor%20Reviews%20Scraper.html">Trip Advisor Reviews Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Twitter%20Data%20Scrape.html">Twitter Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20Current%20Events.html">Wikipedia Current Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20GDP%20per%20Capita%20Scraper.html">Wikipedia GDP per Capita Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wordpress%20Blog%20Post%20Scraper.html">Wordpress Blog Post Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Worldometer%20COVID%20Stats%20Scraper.html">Worldometer COVID Stats Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Historical%20Data%20Scraper.html">Yahoo Finance Historical Data Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Scraper.html">Yahoo finance Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Ticker%20Symbol%20Scraper.html">Yahoo Ticker Symbol Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yelp%20Review%20Scraper.html">Yelp Review Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Data%20Scrape.html">Youtube Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Playlist%20Scraper.html">Youtube Playlist Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contactus.html">Contact Us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">scrapers</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Reddit Post Scraper</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Reddit Post Scraper.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="reddit-post-scraper">
+<h1>Reddit Post Scraper<a class="headerlink" href="#reddit-post-scraper" title="Permalink to this headline"></a></h1>
+<p>Reddit Post Scraper scrapes  awards, community, description, post_date, post_link, posted_by and upvotes</p>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Tm9kZUpT" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Tm9kZUpT" name="Tm9kZUpT" role="tab" tabindex="-1">NodeJS</button><button aria-controls="panel-0-Q3VybA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Q3VybA==" name="Q3VybA==" role="tab" tabindex="-1">Curl</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bot_studio</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">datakund</span> <span class="o">=</span> <span class="n">bot_studio</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">datakund</span><span class="o">.</span><span class="n">reddit_post_keyword</span><span class="p">(</span><span class="n">keyword</span><span class="o">=</span><span class="s2">&quot;delta&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Tm9kZUpT" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Tm9kZUpT" name="Tm9kZUpT" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">datakund</span><span class="o">=</span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;datakund&quot;</span><span class="p">)</span>
+<span class="nx">datakund</span><span class="p">.</span><span class="nx">reddit_post_keyword</span><span class="p">(</span><span class="s2">&quot;keyword&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Q3VybA==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Q3VybA==" name="Q3VybA==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST http://127.0.0.1:5000/run -H <span class="s1">&#39;cache-control: no-cache&#39;</span> -H <span class="s1">&#39;content-type: application/json&#39;</span> -d <span class="s1">&#39;{&quot;user&quot;:&quot;apiKey&quot;,&quot;bot&quot;:&quot;reddit_post_keyword~D75HsPTUIeOmN0bLp5ulrwB7F1f2&quot;,&quot;publicbot&quot;:true,&quot;outputdata&quot;:{&quot;keyword&quot;:&quot;delta&quot;}}&#39;</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="section" id="response-data">
+<h2>Response Data<a class="headerlink" href="#response-data" title="Permalink to this headline"></a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;1 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;150 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/trees&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;my mom just ate a 750 mg delta 8 gummy&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;22 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/trees/comments/rp7e4s/my_mom_just_ate_a_750_mg_delta_8_gummy/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/seaturtles5288&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;187 upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;5 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;1.3k comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/Coronavirus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Omicron associated with 91% reduction in risk of death compared to Delta, study finds&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;3 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/Coronavirus/comments/s3r8sx/omicron_associated_with_91_reduction_in_risk_of/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/FatFuckinLenny&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;19.9k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;8 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;3.0k comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/Coronavirus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Leaders urge Americans to cancel New Year’s plans: ‘Omicron and delta are coming to your party’&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;19 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/Coronavirus/comments/rr7div/leaders_urge_americans_to_cancel_new_years_plans/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/zsreport&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;25.4k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;0 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4k comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/PublicFreakout&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Woman kicked off Delta flight for wearing a closed vent respirator.&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/PublicFreakout/comments/s4kdh0/woman_kicked_off_delta_flight_for_wearing_a/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/Veenendaler&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;6.6k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;0 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;66 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/trees&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Thoughts on delta 8&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;1 month ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/trees/comments/r9hyok/thoughts_on_delta_8/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/Saintbirdyy&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;13 upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;6 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;4.0k comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/news&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Delta plane makes emergency landing after passenger assaults flight attendant and air marshal, police say&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;1 month ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/news/comments/rd7kem/delta_plane_makes_emergency_landing_after/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/anyonmoussource&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;43.7k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;1 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;799 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/news&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Delta loses $408 million; 8,000 employees contract Covid over the last four weeks&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;4 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/news/comments/s31pyv/delta_loses_408_million_8000_employees_contract/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/Lord-AG&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;8.4k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;0 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;101 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/Drugs&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The truth about Delta 8&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;3 months ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/Drugs/comments/qhy1jt/the_truth_about_delta_8/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/CDCpup&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;57 upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;1 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;963 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/Coronavirus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Omicron has a 91% lower chance of death than delta variant of COVID-19: study&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;4 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/Coronavirus/comments/s2qtiy/omicron_has_a_91_lower_chance_of_death_than_delta/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/ankermouse11&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;4.4k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;4 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4k comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/PublicFreakout&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Obnoxious drunk guy not wearing his mask fights another passenger on Delta flight&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;23 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/PublicFreakout/comments/roa3pc/obnoxious_drunk_guy_not_wearing_his_mask_fights/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/tefunka&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;16.7k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;20 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;1.1k comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/mildlyinteresting&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Flew on a new Delta plane, and they put a window in the lavatory&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;27 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/mildlyinteresting/comments/rln9ek/flew_on_a_new_delta_plane_and_they_put_a_window/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/MaximumEngineering8&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;36.2k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;14 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;1.6k comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/Coronavirus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;U.K. Study Finds No Evidence Omicron Cases Are Less Severe Than Delta&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;1 month ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/Coronavirus/comments/rii6vj/uk_study_finds_no_evidence_omicron_cases_are_less/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/Fearless-Cricket3297&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;15.8k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;1 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;171 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/trees&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;I tried Delta-8&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;4 months ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/trees/comments/q0oa7j/i_tried_delta8/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/boonkdocksaints&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;463 upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;1 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;580 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/EverythingScience&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Cyprus reportedly discovers a Covid variant that combines omicron and delta&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;8 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/EverythingScience/comments/rzj7ru/cyprus_reportedly_discovers_a_covid_variant_that/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/malcolm58&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;2.6k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;4 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;219 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/mildlyinfuriating&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Had time to go to bed and wake up in the morning … still on hold. Thanks Delta&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;4 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/mildlyinfuriating/comments/s2pc7e/had_time_to_go_to_bed_and_wake_up_in_the_morning/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/Juggernaut06&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;9.2k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;15 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;607 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/askscience&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Do we have evidence that Omicron is \&quot;more mild\&quot; than Delta coronavirus?&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;18 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/askscience/comments/rs3cn1/do_we_have_evidence_that_omicron_is_more_mild/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/jdtrouble&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;7.5k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;133 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;352 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/Superstonk&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;GME Delta Neutral Update - Hedgies R F&#39;d&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;10 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/Superstonk/comments/rxtqpg/gme_delta_neutral_update_hedgies_r_fd/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/yelyah2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;6.2k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;5 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1k comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/Coronavirus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;First stats for Omicron in Israel: protection for vaccinated similar to Delta, twice as dangerous for unvaccinated&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2 months ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/Coronavirus/comments/r5ueps/first_stats_for_omicron_in_israel_protection_for/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/benben83&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;23.3k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;1 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;576 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/entertainment&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&#39;Karen&#39; who slapped Delta passenger is ex-&#39;Baywatch&#39; actress Patricia Cornwall&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;20 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/entertainment/comments/rql0oz/karen_who_slapped_delta_passenger_is_exbaywatch/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/nimobo&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;4.5k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;3 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;701 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/Coronavirus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;U.S. hospitals are once again &#39;at a breaking point&#39; with delta and omicron&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;26 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/Coronavirus/comments/rlrch6/us_hospitals_are_once_again_at_a_breaking_point/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/Dirtyfaction&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;6.1k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;0 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;511 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/Coronavirus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Omicron Cases Pass U.S. Peak Seen With Delta, But With Fewer Hospitalizations&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;21 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/Coronavirus/comments/rpntx6/omicron_cases_pass_us_peak_seen_with_delta_but/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/jsinkwitz&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;3.9k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;3 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;875 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/canada&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Omicron carries 80% less risk of hospitalization vs. Delta, study suggests&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;26 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/canada/comments/rmceub/omicron_carries_80_less_risk_of_hospitalization/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/NilbyBC&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;2.8k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;4 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;400 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/collapse&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;New Variant \&quot;Deltacron\&quot; discovered in Cyprus, 8 January 2022. \&quot;...Shares the genetic background of the Delta variant along with some of the mutations of Omicron...\&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;9 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/collapse/comments/rzblwr/new_variant_deltacron_discovered_in_cyprus_8/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/fkaneko&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;1.1k upvotes&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;awards&quot;</span><span class="p">:</span> <span class="s2">&quot;0 awards&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;210 comments&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;community&quot;</span><span class="p">:</span> <span class="s2">&quot;r/news&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Three women charged for allegedly assaulting Delta Airlines employees&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_date&quot;</span><span class="p">:</span> <span class="s2">&quot;3 days ago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;post_link&quot;</span><span class="p">:</span> <span class="s2">&quot;/r/news/comments/s3fojc/three_women_charged_for_allegedly_assaulting/&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="s2">&quot;u/Bonboniru&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;upvotes&quot;</span><span class="p">:</span> <span class="s2">&quot;1.8k upvotes&quot;</span>
+        <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;resume_variable&quot;</span><span class="p">:</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success_score&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Google%20Trends%20Scraper%20Bot.html" class="btn btn-neutral float-left" title="Google Trends Scraper Bot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Square%20Yards%20Properties%20Scraper%20With%20No%20Input.html" class="btn btn-neutral float-right" title="Square Yards Properties Scraper With No Input" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, datakund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

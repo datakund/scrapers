@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worldometer COVID Stats Scraper &mdash; scrapers 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Yahoo Finance Historical Data Scraper" href="Yahoo%20Finance%20Historical%20Data%20Scraper.html" />
+    <link rel="prev" title="Wordpress Blog Post Scraper" href="Wordpress%20Blog%20Post%20Scraper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> scrapers
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to DataKund</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yellow%20Pages%20Business%20Details%20Scraper%20Bot.html">Yellow Pages Business Details Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Instagram%20profile%20Scraper%20Bot.html">Instagram profile Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LinkedIn%20Search%20Results%20Scraper%20Bot.html">LinkedIn Search Results Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Trends%20Scraper%20Bot.html">Google Trends Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reddit%20Post%20Scraper.html">Reddit Post Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Square%20Yards%20Properties%20Scraper%20With%20No%20Input.html">Square Yards Properties Scraper With No Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9%2011%20Victim%20List%20Scraper.html">9/11 Victim List Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coin%20Market%20Cap%20Scraper.html">Coin Market Cap Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="All%20movie%20scraper.html">All movie scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Amazon%20Product%20Price%20Scraper%20Bot.html">Amazon Product Price Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bing%20Search%20Scraper.html">Bing Search Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coindesk%20Price%20Scraper.html">Coindesk Price Scraper with Commodity Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Down%20Detector%20Scraper.html">Down Detector Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Epoch%20Timestamp%20Converter%20Scraper.html">Epoch Timestamp Converter Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Facebook%20Friend%20List%20Scraper%20Bot.html">Facebook Friend List Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gaana%20Scraper.html">Gaana Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="google%20scholar%20scraper.html">Google Scholar Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Search%20Result%20Scraper.html">Google Search Result Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IMDb%20Top%20250%20Movies%20Scraper.html">IMDb Top 250 Movies Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Goodreads%20by%20Keyword%20Scraper.html">Goodreads by Keyword Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Investing_com%20World%20Indices%20Scraper.html">Investing.com World Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trading%20View%20Market%20Indices%20Scraper.html">Trading View Market Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trip%20Advisor%20Reviews%20Scraper.html">Trip Advisor Reviews Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Twitter%20Data%20Scrape.html">Twitter Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20Current%20Events.html">Wikipedia Current Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20GDP%20per%20Capita%20Scraper.html">Wikipedia GDP per Capita Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wordpress%20Blog%20Post%20Scraper.html">Wordpress Blog Post Scraper</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Worldometer COVID Stats Scraper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#response-data">Response Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Historical%20Data%20Scraper.html">Yahoo Finance Historical Data Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Scraper.html">Yahoo finance Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Ticker%20Symbol%20Scraper.html">Yahoo Ticker Symbol Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yelp%20Review%20Scraper.html">Yelp Review Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Data%20Scrape.html">Youtube Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Playlist%20Scraper.html">Youtube Playlist Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contactus.html">Contact Us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">scrapers</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Worldometer COVID Stats Scraper</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Worldometer COVID Stats Scraper.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="worldometer-covid-stats-scraper">
+<h1>Worldometer COVID Stats Scraper<a class="headerlink" href="#worldometer-covid-stats-scraper" title="Permalink to this headline"></a></h1>
+<p>Run the bot, enter the country name and click submit
+Bot will visit worldometer.info and scrape the COVID stats of that particular country.</p>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Tm9kZUpT" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Tm9kZUpT" name="Tm9kZUpT" role="tab" tabindex="-1">NodeJS</button><button aria-controls="panel-0-Q3VybA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Q3VybA==" name="Q3VybA==" role="tab" tabindex="-1">Curl</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bot_studio</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">datakund</span> <span class="o">=</span> <span class="n">bot_studio</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">datakund</span><span class="o">.</span><span class="n">worldometer_corona_countrywise</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Tm9kZUpT" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Tm9kZUpT" name="Tm9kZUpT" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">datakund</span><span class="o">=</span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;datakund&quot;</span><span class="p">)</span>
+<span class="nx">datakund</span><span class="p">.</span><span class="nx">worldometer_corona_countrywise</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Q3VybA==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Q3VybA==" name="Q3VybA==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST http://127.0.0.1:5000/run -H <span class="s1">&#39;cache-control: no-cache&#39;</span> -H <span class="s1">&#39;content-type: application/json&#39;</span> -d <span class="s1">&#39;{&quot;user&quot;:&quot;apiKey&quot;,&quot;bot&quot;:&quot;worldometer_corona_countrywise~D75HsPTUIeOmN0bLp5ulrwB7F1f2&quot;,&quot;publicbot&quot;:true}&#39;</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="section" id="response-data">
+<h2>Response Data<a class="headerlink" href="#response-data" title="Permalink to this headline"></a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;23,591,203&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;USA&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,618&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;67,631,191&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;874,321&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,736,605&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;India&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;347&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;37,618,271&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;486,784&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Brazil&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;3,655,733&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;UK&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,222&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;15,305,410&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;152,075&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;France&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;633,899&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Russia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,205&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;10,834,260&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;321,990&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Turkey&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Italy&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;3,002,335&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Spain&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,945&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;8,424,503&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;90,993&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Germany&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;885,619&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Argentina&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,579&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;7,197,323&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;118,231&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Iran&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;178,734&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Colombia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,535&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;5,568,068&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;131,130&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mexico&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;421,122&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Poland&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,708&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;4,323,482&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;102,309&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Indonesia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;105,007&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Ukraine&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,270&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;3,759,530&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;98,361&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Netherlands&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;91,611&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;South Africa&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,546&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;3,560,921&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;93,451&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Philippines&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;40,619&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Malaysia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;964&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;2,810,689&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;31,808&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Canada&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Peru&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;6,044&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;2,631,826&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;203,550&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Czechia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;484,214&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Belgium&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,456&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;2,484,027&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;28,661&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Thailand&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;24,055&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Iraq&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;583&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;2,118,779&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;24,252&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;262,040&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Vietnam&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;363&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;2,045,290&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;35,788&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Romania&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;331,158&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Portugal&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,905&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;1,906,891&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;19,334&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Japan&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;95,016&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Chile&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,035&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;1,885,540&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;39,426&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Australia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Switzerland&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;291,293&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Greece&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,135&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;1,679,705&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;22,087&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bangladesh&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;301,944&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Sweden&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,517&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;1,560,363&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;15,470&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Austria&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;152,018&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Serbia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,508&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;1,449,192&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;13,098&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Hungary&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;39,881&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Pakistan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;128&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;1,333,521&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;29,029&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Denmark&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;458,342&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Ireland&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,202&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;1,109,818&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;6,035&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Jordan&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;84,406&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Kazakhstan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;684&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;1,071,130&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;13,087&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Morocco&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;17,502&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cuba&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;737&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;1,002,499&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;8,341&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Georgia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;34,734&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Slovakia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;3,176&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;880,671&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;17,352&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Nepal&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;160,761&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bulgaria&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;4,695&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;830,604&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;32,247&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Lebanon&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;48,441&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Croatia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;3,236&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;818,832&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;13,157&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;UAE&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;58,179&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Tunisia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,149&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;788,012&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;25,803&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bolivia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,272&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Belarus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;618&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;717,034&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;5,836&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;S. Korea&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;23,981&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Guatemala&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;878&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;653,555&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;16,179&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Azerbaijan&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Saudi Arabia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;47,796&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Costa Rica&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,437&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;620,587&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;7,421&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Sri Lanka&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;57,203&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Panama&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,703&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;580,324&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;7,528&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Lithuania&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;70,772&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Slovenia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,744&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;538,325&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;5,705&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Myanmar&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;433,090&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Norway&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;252&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;523,424&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;1,382&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Uruguay&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;37,866&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Dominican Republic&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;388&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;504,914&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;4,269&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraguay&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;43,356&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Kuwait&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;567&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;470,478&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;2,477&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Ethiopia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;12,536&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Venezuela&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;190&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;456,641&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;5,383&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Palestine&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;96,005&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mongolia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;622&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;411,350&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;2,089&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Egypt&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;7,127&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Libya&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;834&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;398,055&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;5,853&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Finland&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;13,091&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Moldova&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,600&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;390,742&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;10,452&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Honduras&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;6,110&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Armenia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,699&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;347,785&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;8,020&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Kenya&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;111,633&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bosnia and Herzegovina&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;4,260&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;317,692&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;13,841&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Oman&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;21,185&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bahrain&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;780&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;310,906&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;1,398&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Latvia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;41,717&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Qatar&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;223&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;303,240&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;627&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Zambia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;7,591&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Singapore&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;142&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;293,014&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;843&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Estonia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;23,439&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Nigeria&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;251,178&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;3,110&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;North Macedonia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;10,312&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Botswana&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,045&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;239,887&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;2,534&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Albania&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;103,827&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cyprus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;560&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;228,881&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;684&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Algeria&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;13,090&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Zimbabwe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;346&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;226,460&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;5,258&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozambique&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;5,411&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Uzbekistan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;44&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;206,122&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;1,518&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Montenegro&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;7,227&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Kyrgyzstan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;424&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;191,288&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;2,836&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Afghanistan&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;56,295&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Uganda&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;71&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;158,676&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;3,424&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Namibia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Luxembourg&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;78,635&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Rwanda&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;105&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;125,568&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;1,411&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Laos&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cambodia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;43,630&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Jamaica&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;851&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;113,438&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;2,536&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;3,530&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;China&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;105,258&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;4,636&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Maldives&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Trinidad and Tobago&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;7,466&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Angola&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;54&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;93,974&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;1,866&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Senegal&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;30,776&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;DRC&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;14&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;82,984&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;1,278&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Malawi&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;3,620&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Ivory Coast&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;28&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;79,273&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;761&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;57,776&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;French Guiana&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,130&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;69,381&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;351&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Eswatini&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;14,905&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Suriname&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;2,045&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;65,282&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;1,216&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Malta&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;3,803&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Fiji&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;823&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;59,785&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;746&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;4,277&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Madagascar&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;41&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;55,827&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;1,169&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mauritania&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;2,482&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cabo Verde&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;665&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;54,367&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;376&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Guyana&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;8,085&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Sudan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;75&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;51,802&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;3,388&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Syria&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;9,664&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Iceland&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;128&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;48,482&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;44&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;French Polynesia&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;5,217&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Gabon&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;130&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;45,405&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;299&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Belize&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;3,155&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Channel Islands&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;692&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;36,852&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;122&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;5,614&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Barbados&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;934&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;35,734&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;269&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Guinea&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;31,405&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mayotte&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;657&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;34,555&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;186&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Curaçao&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;5,049&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Seychelles&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,410&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;32,846&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;140&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Tanzania&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;31,395&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;745&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Aruba&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;3,638&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mali&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;33&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;28,755&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;692&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Haiti&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mauritius&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Congo&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,118&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Burkina Faso&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;20,249&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;339&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Timor-Leste&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;935&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Taiwan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;36&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;17,885&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;851&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;3,285&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Saint Lucia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,698&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;17,531&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;314&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;3,463&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;South Sudan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;16,533&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;136&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Brunei&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,604&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Equatorial Guinea&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;121&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;15,492&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;178&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;New Zealand&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;571&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Djibouti&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;187&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;14,984&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;189&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;801&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;New Caledonia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;973&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;13,829&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;282&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;508&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Hong Kong&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;28&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;13,048&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;213&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,381&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Gambia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;138&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;11,572&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;347&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Gibraltar&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,641&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;San Marino&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;3,026&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;10,639&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;103&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Faeroe Islands&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,271&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Yemen&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;65&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;10,308&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;1,991&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Grenada&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,953&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bermuda&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;1,776&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;9,144&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;110&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Eritrea&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Niger&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;5,261&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Greenland&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;53&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;8,025&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;512&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Comoros&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;177&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;7,767&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;159&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Sierra Leone&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;7,544&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;125&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Liechtenstein&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Guinea-Bissau&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,828&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Chad&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;6,887&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;185&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Monaco&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;903&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;St. Vincent Grenadines&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;780&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;6,599&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;87&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Caribbean Netherlands&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,438&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Sao Tome and Principe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;293&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;5,569&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;66&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;British Virgin Islands&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Turks and Caicos&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;1,217&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Saint Kitts and Nevis&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;death_per_million&quot;</span><span class="p">:</span> <span class="s2">&quot;521&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;4,968&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;28&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bhutan&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;254&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Saint Pierre Miquelon&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;494&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;active_case&quot;</span><span class="p">:</span> <span class="s2">&quot;133&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_cases&quot;</span><span class="p">:</span> <span class="s2">&quot;152&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;total_deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;resume_variable&quot;</span><span class="p">:</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success_score&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;resume_dict&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Wordpress%20Blog%20Post%20Scraper.html" class="btn btn-neutral float-left" title="Wordpress Blog Post Scraper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Yahoo%20Finance%20Historical%20Data%20Scraper.html" class="btn btn-neutral float-right" title="Yahoo Finance Historical Data Scraper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, datakund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

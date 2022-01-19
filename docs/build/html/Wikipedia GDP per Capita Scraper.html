@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wikipedia GDP per Capita Scraper &mdash; scrapers 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Wordpress Blog Post Scraper" href="Wordpress%20Blog%20Post%20Scraper.html" />
+    <link rel="prev" title="Wikipedia Current Events" href="Wikipedia%20Current%20Events.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> scrapers
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to DataKund</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yellow%20Pages%20Business%20Details%20Scraper%20Bot.html">Yellow Pages Business Details Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Instagram%20profile%20Scraper%20Bot.html">Instagram profile Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LinkedIn%20Search%20Results%20Scraper%20Bot.html">LinkedIn Search Results Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Trends%20Scraper%20Bot.html">Google Trends Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reddit%20Post%20Scraper.html">Reddit Post Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Square%20Yards%20Properties%20Scraper%20With%20No%20Input.html">Square Yards Properties Scraper With No Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9%2011%20Victim%20List%20Scraper.html">9/11 Victim List Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coin%20Market%20Cap%20Scraper.html">Coin Market Cap Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="All%20movie%20scraper.html">All movie scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Amazon%20Product%20Price%20Scraper%20Bot.html">Amazon Product Price Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bing%20Search%20Scraper.html">Bing Search Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coindesk%20Price%20Scraper.html">Coindesk Price Scraper with Commodity Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Down%20Detector%20Scraper.html">Down Detector Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Epoch%20Timestamp%20Converter%20Scraper.html">Epoch Timestamp Converter Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Facebook%20Friend%20List%20Scraper%20Bot.html">Facebook Friend List Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gaana%20Scraper.html">Gaana Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="google%20scholar%20scraper.html">Google Scholar Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Search%20Result%20Scraper.html">Google Search Result Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IMDb%20Top%20250%20Movies%20Scraper.html">IMDb Top 250 Movies Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Goodreads%20by%20Keyword%20Scraper.html">Goodreads by Keyword Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Investing_com%20World%20Indices%20Scraper.html">Investing.com World Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trading%20View%20Market%20Indices%20Scraper.html">Trading View Market Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trip%20Advisor%20Reviews%20Scraper.html">Trip Advisor Reviews Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Twitter%20Data%20Scrape.html">Twitter Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20Current%20Events.html">Wikipedia Current Events</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Wikipedia GDP per Capita Scraper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#response-data">Response Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Wordpress%20Blog%20Post%20Scraper.html">Wordpress Blog Post Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Worldometer%20COVID%20Stats%20Scraper.html">Worldometer COVID Stats Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Historical%20Data%20Scraper.html">Yahoo Finance Historical Data Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Scraper.html">Yahoo finance Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Ticker%20Symbol%20Scraper.html">Yahoo Ticker Symbol Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yelp%20Review%20Scraper.html">Yelp Review Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Data%20Scrape.html">Youtube Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Playlist%20Scraper.html">Youtube Playlist Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contactus.html">Contact Us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">scrapers</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Wikipedia GDP per Capita Scraper</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Wikipedia GDP per Capita Scraper.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="wikipedia-gdp-per-capita-scraper">
+<h1>Wikipedia GDP per Capita Scraper<a class="headerlink" href="#wikipedia-gdp-per-capita-scraper" title="Permalink to this headline"></a></h1>
+<p>Extract Wikipedia GDP per Capita country wise using UN data and IMF Data  from Wikipedia</p>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Tm9kZUpT" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Tm9kZUpT" name="Tm9kZUpT" role="tab" tabindex="-1">NodeJS</button><button aria-controls="panel-0-Q3VybA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Q3VybA==" name="Q3VybA==" role="tab" tabindex="-1">Curl</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bot_studio</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">datakund</span> <span class="o">=</span> <span class="n">bot_studio</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">datakund</span><span class="o">.</span><span class="n">wikipedia_gdp_per_capita</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Tm9kZUpT" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Tm9kZUpT" name="Tm9kZUpT" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">datakund</span><span class="o">=</span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;datakund&quot;</span><span class="p">)</span>
+<span class="nx">datakund</span><span class="p">.</span><span class="nx">wikipedia_gdp_per_capita</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Q3VybA==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Q3VybA==" name="Q3VybA==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST http://127.0.0.1:5000/run -H <span class="s1">&#39;cache-control: no-cache&#39;</span> -H <span class="s1">&#39;content-type: application/json&#39;</span> -d <span class="s1">&#39;{&quot;user&quot;:&quot;apiKey&quot;,&quot;bot&quot;:&quot;wikipedia_gdp_per_capita~D75HsPTUIeOmN0bLp5ulrwB7F1f2&quot;,&quot;publicbot&quot;:true}&#39;</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="section" id="response-data">
+<h2>Response Data<a class="headerlink" href="#response-data" title="Permalink to this headline"></a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;190,532&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Monaco&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;179,258&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Liechtenstein&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Luxembourg&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;131,301.599&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;115,481&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;115,481&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;117,768&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bermuda&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Switzerland&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;93,515.484&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;85,135&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;85,135&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Ireland&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;102,394.017&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;81,637&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;81,637&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;92,692&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cayman Islands&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Norway&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;82,244.232&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;74,986&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;74,986&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;United States&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;69,375.375&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;65,134&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;65,134&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Denmark&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;67,919.585&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;60,657&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;60,657&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Iceland&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;68,843.646&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;71,345&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;71,345&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Singapore&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;66,263.418&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;64,103&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;64,103&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Australia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;62,618.587&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;54,763&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;54,763&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Qatar&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;61,790.572&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;64,782&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;64,782&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Sweden&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;58,639.194&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;52,896&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;52,896&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Macau&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;42,106.564&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;84,097&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;84,097&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Netherlands&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;57,714.876&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;53,053&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;53,053&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Finland&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;53,522.565&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;48,678&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;48,678&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Austria&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;53,793.367&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;49,701&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;49,701&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;53,353&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Greenland&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Germany&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;50,787.859&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;46,232&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;46,232&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Belgium&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;50,412.713&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;46,198&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;46,198&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;San Marino&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;50,934.189&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;47,313&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;47,313&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Canada&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;52,791.228&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;46,550&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;46,550&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Hong Kong&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;49,485.084&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;49,180&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;49,180&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;48,511&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;British Virgin Islands&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Israel&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;49,840.250&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;46,376&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;46,376&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;New Zealand&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;48,348.994&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;43,264&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;43,264&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;46,200.258&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;41,855&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;41,855&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;France&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;45,028.265&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;40,319&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;40,319&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Japan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;40,704.304&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;40,063&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;40,063&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Andorra&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;40,417.265&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;40,887&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;40,887&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Guam&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;37,724&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;37,724&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;United Arab Emirates&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;43,537.689&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;43,103&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;43,103&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Italy&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;35,584.882&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;33,090&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;33,090&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;34,942&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;New Caledonia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;South Korea&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;35,195.522&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;32,143&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;32,143&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Brunei&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;33,979.373&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;31,086&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;31,086&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Puerto Rico&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;34,143.272&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;35,791&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;35,791&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Taiwan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;33,401.709&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;28,371&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;28,371&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Malta&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;31,996.534&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;33,752&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;33,752&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;31,353&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Turks and Caicos Islands&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Spain&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;30,536.858&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;29,816&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;29,816&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bahamas&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;27,437.197&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;34,864&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;34,864&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cyprus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;29,486.275&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;28,285&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;28,285&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Sint Maarten&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;29,160&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;29,160&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Slovenia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;28,939.271&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;26,062&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;26,062&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Estonia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;27,100.736&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;23,740&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;23,740&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Czech Republic&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;25,806.384&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;23,452&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;23,452&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;25,529&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Anguilla&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Kuwait&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;27,927.163&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;31,999&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;31,999&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Portugal&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;24,457.144&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;23,350&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;23,350&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bahrain&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;26,293.947&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;23,504&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;23,504&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Aruba&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;25,700.865&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;30,975&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;30,975&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Saudi Arabia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;23,762.420&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;23,140&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;23,140&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Lithuania&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;22,411.646&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;19,795&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;19,795&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;21,603&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cook Islands&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;21,567&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;French Polynesia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Slovakia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;21,383.286&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;19,256&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;19,256&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Northern Mariana Islands&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;20,660&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;20,660&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Greece&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;19,827.162&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;19,604&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;19,604&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Latvia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;19,538.902&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;17,885&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;17,885&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;18,980&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Curaçao&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Hungary&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;18,527.592&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;16,879&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;16,879&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Poland&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;17,318.497&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;15,727&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;15,727&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Croatia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;15,807.696&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;14,627&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;14,627&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Oman&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;17,632.651&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;15,343&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;15,343&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Barbados&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;16,105.128&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;18,149&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;18,149&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Trinidad and Tobago&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;15,352.721&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;16,637&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;16,637&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Uruguay&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;16,965.081&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;16,190&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;16,190&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Chile&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;16,799.367&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;14,896&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;14,896&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Romania&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;14,863.887&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;12,914&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;12,914&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Saint Kitts and Nevis&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;16,917.159&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;19,896&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;19,896&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Antigua and Barbuda&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;14,117.844&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;17,113&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;17,113&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Panama&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;13,861.061&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;15,728&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;15,728&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;13,487&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Montserrat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Palau&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,835.178&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;15,572&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;15,572&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;China&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,891.202&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;10,004&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;10,004&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Costa Rica&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,860.222&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;12,238&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;12,238&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Maldives&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,899.087&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;10,626&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;10,626&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Russia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,273.242&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,606&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;11,606&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Malaysia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,124.670&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,414&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;11,414&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;American Samoa&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,535&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;11,535&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bulgaria&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,331.872&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;9,703&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;9,703&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Nauru&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;10,138.196&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;12,351&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;12,351&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Kazakhstan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;10,144.682&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;9,793&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;9,793&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Saint Lucia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;9,419.272&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,611&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;11,611&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Seychelles&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;13,140.368&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;17,382&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;17,382&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mauritius&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,681.608&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;11,169&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;11,169&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Turkey&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;9,406.575&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;9,127&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;9,127&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;9,296&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cuba&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mexico&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;9,967.388&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;9,849&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;9,849&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Guyana&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;9,369.011&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,610&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;6,610&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Grenada&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;9,575.343&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;10,818&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;10,818&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Argentina&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;9,929.154&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;10,041&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;10,041&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Montenegro&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,837.578&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,825&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;8,825&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Turkmenistan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,843.868&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,124&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;8,124&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Serbia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,793.836&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,359&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;7,359&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Gabon&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,569.216&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,773&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;7,773&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Iran&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;12,725.042&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,282&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;7,282&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Equatorial Guinea&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,625.763&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,130&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;8,130&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Dominican Republic&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,491.619&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,282&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;8,282&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Botswana&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,349.884&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,961&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;7,961&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Thailand&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,808.663&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,785&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;7,785&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Saint Vincent and the Grenadines&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,952.242&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,464&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;7,464&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Brazil&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,741.153&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,755&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;8,755&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Dominica&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,777.016&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;8,111&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;8,111&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bosnia and Herzegovina&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,647.830&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,109&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;6,109&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Peru&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,676.517&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,978&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;6,978&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;North Macedonia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,711.734&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,093&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;6,093&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Belarus&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,032.477&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,674&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;6,674&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Albania&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,837.180&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,303&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;5,303&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Colombia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,892.140&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,432&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;6,432&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Ecuador&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,884.147&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,184&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;6,184&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;South Africa&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,861.166&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,001&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;6,001&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Jamaica&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,421.642&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,369&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;5,369&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraguay&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,028.217&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,406&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;5,406&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Tuvalu&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,004.100&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,036&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,036&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Tonga&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,009.784&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,865&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,865&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Fiji&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,127.440&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,185&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;6,185&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Azerbaijan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,167.377&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,782&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,782&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Kosovo&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,986.263&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,473&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,473&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Moldova&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,791.625&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,957&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,957&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Iraq&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,892.964&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;5,730&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;5,730&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Guatemala&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,542.253&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,363&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,363&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Namibia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,693.455&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,957&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,957&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Georgia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,807.950&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,439&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,439&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Jordan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,393.642&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,405&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,405&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Indonesia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,224.982&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,136&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,136&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Marshall Islands&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,338.173&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,038&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,038&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mongolia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,185.536&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,295&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,295&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Armenia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,594.912&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,623&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,623&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;El Salvador&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,244.299&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,187&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,187&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Suriname&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,620.395&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;6,360&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;6,360&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Ukraine&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,384.237&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,496&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,496&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Belize&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,457.886&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,884&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,884&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Egypt&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,851.746&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,161&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,161&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Sri Lanka&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,665.765&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,940&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,940&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Micronesia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,855.223&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,640&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,640&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Vietnam&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,742.858&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,715&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,715&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Eswatini&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,965.426&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,002&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,002&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Tunisia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,555.587&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,318&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,318&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Samoa&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,906.413&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,285&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,285&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Philippines&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,492.072&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,324&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,324&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bolivia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,266.690&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,552&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,552&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Libya&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,068.611&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,810&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,810&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cape Verde&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,346.553&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,604&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,604&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Morocco&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,470.795&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,282&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,282&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Algeria&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,638.328&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,976&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,976&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bhutan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,296.106&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,361&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,361&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Djibouti&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,645.500&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,252&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,252&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Palestine&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,320.853&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,424&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,424&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Vanuatu&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,235.205&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;3,023&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;3,023&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Syria&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,807&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,194&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,194&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Lebanon&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,802&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;7,784&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;7,784&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Laos&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,625.610&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,625&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,625&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Papua New Guinea&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,951.977&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,845&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,845&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Honduras&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,602.170&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,575&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,575&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Ivory Coast&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,489.102&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,276&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,276&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Congo&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,655.719&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,304&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,304&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Solomon Islands&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,356.505&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,945&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,945&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Nigeria&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,272.844&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,361&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,361&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Ghana&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,413.095&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,203&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,203&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;India&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,116.444&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,116&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,116&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mauritania&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,161.279&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,678&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,678&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;São Tomé and Príncipe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,392.893&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,961&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,961&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Bangladesh&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,138.794[9]&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,846&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,846&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Kenya&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,198.593&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,817&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,817&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Angola&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,200.675&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,671&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2,671&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Haiti&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,691.825&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;715&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;715&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Kiribati&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,927.077&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,657&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,657&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Nicaragua&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2,047.097&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,913&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,913&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Uzbekistan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,901.492&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,756&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,756&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cambodia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,647.019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,644&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,644&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Zimbabwe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,664.758&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,464&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,464&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Cameroon&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,645.807&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,534&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,534&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Senegal&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,602.898&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,452&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,452&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Venezuela&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,627.353&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;4,733&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;4,733&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Myanmar&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,246.318&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,421&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,421&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Comoros&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,390.061&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,370&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,370&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Benin&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,446.829&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,220&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,220&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;East Timor&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,262.722&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,561&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,561&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Pakistan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,260&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,187&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,187&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Nepal&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,172.638&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,074&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,074&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Lesotho&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,187.512&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,158&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,158&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Guinea&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,168.178&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;967&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;967&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Kyrgyzstan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,224.745&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,318&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,318&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Tanzania&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,159.193&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,084&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,084&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Togo&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,000.438&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;899&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;899&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mali&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;966.141&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;887&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;887&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Zambia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,115.272&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,292&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1,292&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Uganda&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;1,018.436&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;737&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;737&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Ethiopia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;939.511&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;828&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;828&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Guinea-Bissau&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;858.040&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;688&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;688&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Burkina Faso&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;926.200&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;787&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;787&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Gambia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;819.220&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;776&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;776&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Rwanda&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;802.264&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;820&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;820&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Tajikistan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;839.180&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;894&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;894&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Sudan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;789.448&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;815&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;815&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Yemen&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;585.003&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;855&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;855&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Chad&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;729.844&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;707&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;707&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Liberia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;703.406&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;523&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;523&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;640&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;North Korea&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;N/A&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Niger&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;622.230&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;555&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;555&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Eritrea&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;625.974&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;567&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;567&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Afghanistan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;592&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;470&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;470&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;DR Congo&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;593.558&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;545&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;545&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Central African Republic&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;525.914&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;468&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;468&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Sierra Leone&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;541.063&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;528&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;528&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Madagascar&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;498.682&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;523&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;523&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Malawi&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;565.798&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;435&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;435&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozambique&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;492.273&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;504&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;504&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Somalia&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;350.361&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;105&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;105&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;South Sudan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;230.132&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;448&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;448&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;Imf_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Burundi&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imf_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;261.053&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;260&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;un_year&quot;</span><span class="p">:</span> <span class="s2">&quot;260&quot;</span>
+        <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;resume_variable&quot;</span><span class="p">:</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success_score&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;resume_dict&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Wikipedia%20Current%20Events.html" class="btn btn-neutral float-left" title="Wikipedia Current Events" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Wordpress%20Blog%20Post%20Scraper.html" class="btn btn-neutral float-right" title="Wordpress Blog Post Scraper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, datakund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

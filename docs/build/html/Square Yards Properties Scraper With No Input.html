@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Square Yards Properties Scraper With No Input &mdash; scrapers 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9/11 Victim List Scraper" href="9%2011%20Victim%20List%20Scraper.html" />
+    <link rel="prev" title="Reddit Post Scraper" href="Reddit%20Post%20Scraper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> scrapers
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to DataKund</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yellow%20Pages%20Business%20Details%20Scraper%20Bot.html">Yellow Pages Business Details Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Instagram%20profile%20Scraper%20Bot.html">Instagram profile Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LinkedIn%20Search%20Results%20Scraper%20Bot.html">LinkedIn Search Results Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Trends%20Scraper%20Bot.html">Google Trends Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reddit%20Post%20Scraper.html">Reddit Post Scraper</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Square Yards Properties Scraper With No Input</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#response-data">Response Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9%2011%20Victim%20List%20Scraper.html">9/11 Victim List Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coin%20Market%20Cap%20Scraper.html">Coin Market Cap Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="All%20movie%20scraper.html">All movie scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Amazon%20Product%20Price%20Scraper%20Bot.html">Amazon Product Price Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bing%20Search%20Scraper.html">Bing Search Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coindesk%20Price%20Scraper.html">Coindesk Price Scraper with Commodity Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Down%20Detector%20Scraper.html">Down Detector Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Epoch%20Timestamp%20Converter%20Scraper.html">Epoch Timestamp Converter Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Facebook%20Friend%20List%20Scraper%20Bot.html">Facebook Friend List Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gaana%20Scraper.html">Gaana Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="google%20scholar%20scraper.html">Google Scholar Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Search%20Result%20Scraper.html">Google Search Result Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IMDb%20Top%20250%20Movies%20Scraper.html">IMDb Top 250 Movies Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Goodreads%20by%20Keyword%20Scraper.html">Goodreads by Keyword Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Investing_com%20World%20Indices%20Scraper.html">Investing.com World Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trading%20View%20Market%20Indices%20Scraper.html">Trading View Market Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trip%20Advisor%20Reviews%20Scraper.html">Trip Advisor Reviews Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Twitter%20Data%20Scrape.html">Twitter Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20Current%20Events.html">Wikipedia Current Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20GDP%20per%20Capita%20Scraper.html">Wikipedia GDP per Capita Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wordpress%20Blog%20Post%20Scraper.html">Wordpress Blog Post Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Worldometer%20COVID%20Stats%20Scraper.html">Worldometer COVID Stats Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Historical%20Data%20Scraper.html">Yahoo Finance Historical Data Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Scraper.html">Yahoo finance Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Ticker%20Symbol%20Scraper.html">Yahoo Ticker Symbol Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yelp%20Review%20Scraper.html">Yelp Review Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Data%20Scrape.html">Youtube Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Playlist%20Scraper.html">Youtube Playlist Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contactus.html">Contact Us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">scrapers</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Square Yards Properties Scraper With No Input</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Square Yards Properties Scraper With No Input.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="square-yards-properties-scraper-with-no-input">
+<h1>Square Yards Properties Scraper With No Input<a class="headerlink" href="#square-yards-properties-scraper-with-no-input" title="Permalink to this headline"></a></h1>
+<p>Bot will visit suareyard.com and scrape the price, location, name and link of square yard properties</p>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Tm9kZUpT" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Tm9kZUpT" name="Tm9kZUpT" role="tab" tabindex="-1">NodeJS</button><button aria-controls="panel-0-Q3VybA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Q3VybA==" name="Q3VybA==" role="tab" tabindex="-1">Curl</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bot_studio</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">datakund</span> <span class="o">=</span> <span class="n">bot_studio</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">datakund</span><span class="o">.</span><span class="n">square_yards_properties</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Tm9kZUpT" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Tm9kZUpT" name="Tm9kZUpT" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">datakund</span><span class="o">=</span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;datakund&quot;</span><span class="p">)</span>
+<span class="nx">datakund</span><span class="p">.</span><span class="nx">square_yards_properties</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Q3VybA==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Q3VybA==" name="Q3VybA==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST http://127.0.0.1:5000/run -H <span class="s1">&#39;cache-control: no-cache&#39;</span> -H <span class="s1">&#39;content-type: application/json&#39;</span> -d <span class="s1">&#39;{&quot;user&quot;:&quot;apiKey&quot;,&quot;bot&quot;:&quot;square_yards_properties~D75HsPTUIeOmN0bLp5ulrwB7F1f2&quot;,&quot;publicbot&quot;:true}&#39;</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="section" id="response-data">
+<h2>Response Data<a class="headerlink" href="#response-data" title="Permalink to this headline"></a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Sector 61&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;1.25 Cr&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Smart World Orchard&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/gurgaon-residential-property/smart-world-orchard/103238/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Sector 89&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;68.00 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Smart World Gems&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/gurgaon-residential-property/smart-world-gems/106590/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;100 Sq. Ft. to 200 Sq. Ft. (Carpet)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Sector 90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;8.78 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Alphathum&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/noida-residential-property/alphathum/8681/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Budigere&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;44.30 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Shriram Codename Yuva&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/bangalore-residential-property/shriram-codename-yuva/101286/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Hinjewadi&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;31.81 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Kolte Patil Life Republic Universe&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/kolte-patil-life-republic-universe/102376/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Sector 89&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;1.04 Cr&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;M3M Soulitude&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/gurgaon-residential-property/m3m-soulitude/106807/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Dhankawadi&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;32.16 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;4 Taljai Hills Phase 1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/4-taljai-hills-phase-1/102123/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK-3 BHK-4 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Mulund West&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;1.01 Cr&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Piramal Revanta Tower 3 and 4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/mumbai-residential-property/piramal-revanta-tower-3-and-4/100528/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1200 Sq. Ft. to 3200 Sq. Ft. (Carpet)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Devanahalli&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;56.39 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Puravankara Tivoli Hills&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/bangalore-residential-property/puravankara-tivoli-hills/109172/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;67 Sq. Ft. to 1098 Sq. Ft. (Carpet)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Sector 150&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;29.90 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Bhutani City Center&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/noida-residential-property/bhutani-city-center/109184/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK-3 BHK-4 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Powai&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;1.25 Cr&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;LnT Realty Emerald Isle&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/mumbai-residential-property/lnt-realty-emerald-isle/2951/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Mira Bhayandar&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;44.39 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;JP Codename Hotcake&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/mumbai-residential-property/jp-codename-hotcake/10457/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1163 Sq. Ft. to 3875 Sq. Ft. (Carpet)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Sarjapur Road&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;65.13 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Prestige Great Acres&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/bangalore-residential-property/prestige-great-acres/111122/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Sector 150&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;79.90 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Tata Eureka Park Phase 2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/noida-residential-property/tata-eureka-park-phase-2/112905/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Kandivali West&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;1.34 Cr&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Ruparel Mumbai XL&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/mumbai-residential-property/ruparel-mumbai-xl/111437/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Bavdhan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;51.00 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Goel Ganga Legend&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/goel-ganga-legend/2123/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Mahalunge Ingale&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;39.55 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Godrej Hillside&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/godrej-hillside/10730/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Manjari&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;25.07 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Godrej Park Ridge&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/godrej-park-ridge/103462/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;506 Sq. Ft. to 760 Sq. Ft. (Carpet)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Baner&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;70.54 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Mittal One Place&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/mittal-one-place/111696/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Mundhwa&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;19.54 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Purva Silversands&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/purva-silversands/34407/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Hinjewadi&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;49.55 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Mittal SkyHigh Towers&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/mittal-skyhigh-towers/112990/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Bavdhan&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;23.75 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Puraniks Abitante Fiore&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/puraniks-abitante-fiore/100339/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Bhugaon&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;59.28 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Paranjape Forest Trails Highland Tower 9 10 and 11&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/paranjape-forest-trails-highland-tower-9-10-and-11/100539/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Pimple Nilakh&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;96.80 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Yashada Epic Phase 2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/yashada-epic-phase-2/103650/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK-4 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Bachupally&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;57.14 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Urbanrise Codename Talk Of Hyderabad&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/hyderabad-residential-property/urbanrise-codename-talk-of-hyderabad/101894/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Patancheru&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;59.00 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Ramky One Symphony&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/hyderabad-residential-property/ramky-one-symphony/103970/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Moti Nagar&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;85.00 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Brigade Citadel Phase II&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/hyderabad-residential-property/brigade-citadel-phase-ii/104062/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Sanath Nagar&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;1.05 Cr&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Kalpataru Avante&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/hyderabad-residential-property/kalpataru-avante/110954/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Hosahalli&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;92.00 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Puravankara Purva Zenium&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/bangalore-residential-property/puravankara-purva-zenium/10487/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Hinjewadi&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;36.53 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Paranjape Trident Towers&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/paranjape-trident-towers/9368/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Hinjewadi&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;33.80 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Kolte Patil Life Republic Oro Avenue&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/kolte-patil-life-republic-oro-avenue/10279/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK-3 BHK-4 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Thanisandra Main Road&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;33.71 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Bhartiya City Nikoo Homes 4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/bangalore-residential-property/bhartiya-city-nikoo-homes-4/109546/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Dahisar East&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;83.54 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;MICL Aaradhya Prime Park&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/mumbai-residential-property/micl-aaradhya-prime-park/112326/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK-3 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Andheri West&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;1.26 Cr&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Transcon Triumph Tower 3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/mumbai-residential-property/transcon-triumph-tower-3/102847/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;1 BHK-2 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Mahim West&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;1.46 Cr&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Prescon Midtown Bay&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/mumbai-residential-property/prescon-midtown-bay/111905/project&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="s2">&quot;2 BHK Flat&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;Wakad&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;53.19 Lac&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;Jhamtani Ace Almighty Phase I&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;sy_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.squareyards.com/pune-residential-property/jhamtani-ace-almighty-phase-i/21761/project&quot;</span>
+        <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;resume_variable&quot;</span><span class="p">:</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success_score&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Reddit%20Post%20Scraper.html" class="btn btn-neutral float-left" title="Reddit Post Scraper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="9%2011%20Victim%20List%20Scraper.html" class="btn btn-neutral float-right" title="9/11 Victim List Scraper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, datakund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

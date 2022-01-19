@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yahoo Finance Historical Data Scraper &mdash; scrapers 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Yahoo finance Scraper" href="Yahoo%20Finance%20Scraper.html" />
+    <link rel="prev" title="Worldometer COVID Stats Scraper" href="Worldometer%20COVID%20Stats%20Scraper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> scrapers
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to DataKund</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yellow%20Pages%20Business%20Details%20Scraper%20Bot.html">Yellow Pages Business Details Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Instagram%20profile%20Scraper%20Bot.html">Instagram profile Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LinkedIn%20Search%20Results%20Scraper%20Bot.html">LinkedIn Search Results Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Trends%20Scraper%20Bot.html">Google Trends Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reddit%20Post%20Scraper.html">Reddit Post Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Square%20Yards%20Properties%20Scraper%20With%20No%20Input.html">Square Yards Properties Scraper With No Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9%2011%20Victim%20List%20Scraper.html">9/11 Victim List Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coin%20Market%20Cap%20Scraper.html">Coin Market Cap Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="All%20movie%20scraper.html">All movie scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Amazon%20Product%20Price%20Scraper%20Bot.html">Amazon Product Price Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bing%20Search%20Scraper.html">Bing Search Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coindesk%20Price%20Scraper.html">Coindesk Price Scraper with Commodity Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Down%20Detector%20Scraper.html">Down Detector Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Epoch%20Timestamp%20Converter%20Scraper.html">Epoch Timestamp Converter Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Facebook%20Friend%20List%20Scraper%20Bot.html">Facebook Friend List Scraper Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gaana%20Scraper.html">Gaana Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="google%20scholar%20scraper.html">Google Scholar Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Google%20Search%20Result%20Scraper.html">Google Search Result Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IMDb%20Top%20250%20Movies%20Scraper.html">IMDb Top 250 Movies Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Goodreads%20by%20Keyword%20Scraper.html">Goodreads by Keyword Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Investing_com%20World%20Indices%20Scraper.html">Investing.com World Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trading%20View%20Market%20Indices%20Scraper.html">Trading View Market Indices Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Trip%20Advisor%20Reviews%20Scraper.html">Trip Advisor Reviews Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Twitter%20Data%20Scrape.html">Twitter Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20Current%20Events.html">Wikipedia Current Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wikipedia%20GDP%20per%20Capita%20Scraper.html">Wikipedia GDP per Capita Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wordpress%20Blog%20Post%20Scraper.html">Wordpress Blog Post Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Worldometer%20COVID%20Stats%20Scraper.html">Worldometer COVID Stats Scraper</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Yahoo Finance Historical Data Scraper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#response-data">Response Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Finance%20Scraper.html">Yahoo finance Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yahoo%20Ticker%20Symbol%20Scraper.html">Yahoo Ticker Symbol Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Yelp%20Review%20Scraper.html">Yelp Review Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Data%20Scrape.html">Youtube Data Scrape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Youtube%20Playlist%20Scraper.html">Youtube Playlist Scraper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contactus.html">Contact Us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">scrapers</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Yahoo Finance Historical Data Scraper</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Yahoo Finance Historical Data Scraper.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="yahoo-finance-historical-data-scraper">
+<h1>Yahoo Finance Historical Data Scraper<a class="headerlink" href="#yahoo-finance-historical-data-scraper" title="Permalink to this headline"></a></h1>
+<p>Yahoo! Finance is a media property that is part of the Yahoo! network. It provides financial news, data and commentary including stock quotes, press releases, financial reports, and original content. It also offers some online tools for personal finance management. With the help of Yahoo Finance Scrape Bot you can scrape Historical Data of any stock link from yahoo finance.</p>
+<p>How Does it Work?</p>
+<p>Run the bot, Enter Stock Link and click submit button and bot will scrape all the historical data of the given stock link yahoo finance.</p>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Tm9kZUpT" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Tm9kZUpT" name="Tm9kZUpT" role="tab" tabindex="-1">NodeJS</button><button aria-controls="panel-0-Q3VybA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Q3VybA==" name="Q3VybA==" role="tab" tabindex="-1">Curl</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bot_studio</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">datakund</span> <span class="o">=</span> <span class="n">bot_studio</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">datakund</span><span class="o">.</span><span class="n">yahoo_finance_historical_data</span><span class="p">(</span><span class="n">stock_link</span><span class="o">=</span><span class="s2">&quot;https://finance.yahoo.com/quote/YM%3DF?p=YM%3DF&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Tm9kZUpT" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Tm9kZUpT" name="Tm9kZUpT" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">datakund</span><span class="o">=</span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;datakund&quot;</span><span class="p">)</span>
+<span class="nx">datakund</span><span class="p">.</span><span class="nx">yahoo_finance_historical_data</span><span class="p">(</span><span class="s2">&quot;https://finance.yahoo.com/quote/YM%3DF?p=YM%3DF&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Q3VybA==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Q3VybA==" name="Q3VybA==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST http://127.0.0.1:5000/run -H <span class="s1">&#39;cache-control: no-cache&#39;</span> -H <span class="s1">&#39;content-type: application/json&#39;</span> -d <span class="s1">&#39;{&quot;user&quot;:&quot;apiKey&quot;,&quot;bot&quot;:&quot;yahoo_finance_historical_data~D75HsPTUIeOmN0bLp5ulrwB7F1f2&quot;,&quot;publicbot&quot;:true,&quot;outputdata&quot;:{&quot;stock_link&quot;:&quot;https://finance.yahoo.com/quote/YM%3DF?p=YM%3DF&quot;}}&#39;</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="section" id="response-data">
+<h2>Response Data<a class="headerlink" href="#response-data" title="Permalink to this headline"></a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;current_price&quot;</span><span class="p">:</span> <span class="s2">&quot;2,151.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;stock_name&quot;</span><span class="p">:</span> <span class="s2">&quot;E-mini Russell 2000 Index Futur (RTY=F)&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,151.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 18, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,168.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,143.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,162.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;27,076&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,157.70&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 14, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,163.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,120.20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,157.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;225,874&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,155.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 13, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,197.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,148.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,176.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;225,874&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,173.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 12, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,209.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,161.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,190.20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;203,930&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,190.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 11, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,194.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,144.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,168.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;200,103&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,168.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 10, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,184.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,125.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,172.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;310,296&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,175.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 07, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,219.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,173.20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,207.70&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;230,479&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,202.70&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 06, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,220.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,173.70&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,189.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;267,822&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,190.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 05, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,276.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,187.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,267.20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;248,172&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,266.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 04, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,288.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,250.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,268.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;182,380&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,269.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Jan 03, 2022&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,284.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,244.20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,247.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;222,614&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,242.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 31, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,258.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,231.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,245.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;134,759&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,246.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 30, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,272.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,237.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,244.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;122,020&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,247.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 29, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,252.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,229.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,247.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;132,269&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,243.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 28, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,275.20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,240.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,259.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;145,387&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,259.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 27, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,260.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,222.70&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,238.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;130,970&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,236.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 23, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,245.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,220.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,220.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;135,494&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,219.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 22, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,223.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,187.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,203.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;178,647&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,199.70&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 21, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,204.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,135.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,139.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;206,131&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,135.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 20, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,173.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,102.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,169.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;292,340&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,142.43&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 17, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,160.70&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,132.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,152.70&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;334,169&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,151.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 16, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,227.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,141.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,198.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;56,533&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,198.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 15, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,201.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,130.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,164.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;83,275&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,161.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 14, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,195.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,152.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,184.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;155,043&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,180.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 13, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,227.20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,167.20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,209.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;258,168&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,212.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 10, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,244.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,196.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,219.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;243,187&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,218.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 09, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,274.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,214.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,269.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;265,664&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,269.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 08, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,279.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,243.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,262.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;200,531&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,253.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 07, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,274.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,201.70&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,207.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;217,576&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,203.60&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 06, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,220.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,149.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,166.40&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;250,218&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,159.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 03, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,222.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,139.20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,214.70&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;327,736&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,205.20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 02, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,213.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,143.50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,146.00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;332,772&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;adj_close&quot;</span><span class="p">:</span> <span class="s2">&quot;2,146.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 01, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,255.90&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;2,136.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,213.80&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;373,963&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;Nov 30, 2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;2,258.30&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;open&quot;</span><span class="p">:</span> <span class="s2">&quot;2,244.70&quot;</span>
+        <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;resume_variable&quot;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span>
+  <span class="nt">&quot;success_score&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Worldometer%20COVID%20Stats%20Scraper.html" class="btn btn-neutral float-left" title="Worldometer COVID Stats Scraper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Yahoo%20Finance%20Scraper.html" class="btn btn-neutral float-right" title="Yahoo finance Scraper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, datakund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
