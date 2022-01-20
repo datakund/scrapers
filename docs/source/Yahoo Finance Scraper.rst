@@ -3,6 +3,8 @@ Yahoo finance Scraper
 
 Yahoo finance Scraper is a python library to scrape stock, stock prices and stock change of company, using browser automation.
 
+.. image:: images/yahoo_finance.*
+
 Code
 ######
 .. tabs::
