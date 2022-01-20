@@ -3,6 +3,8 @@ Instagram profile Scraper Bot
 
 Instagram profile Scraper Bot Scrapes bio, followers, followed_by, following, posts, profile_name with instagram profile_link
 
+.. image:: images/instagram_profile_scraper.*
+
 Code
 ######
 .. tabs::
