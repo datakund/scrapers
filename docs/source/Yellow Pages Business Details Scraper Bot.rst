@@ -3,6 +3,8 @@ Yellow Pages Business Details Scraper Bot
 
 Yellow Pages helps you to find services for your requirement. Connects you with right Manufacturer & Suppliers, Dealers of products you are looking. The Yellow Pages Business Details Scraper Bot will make your job a lot easier.
 
+.. image:: images/yellowpages_scraper.*
+
 Code
 ######
 .. tabs::
