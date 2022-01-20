@@ -3,6 +3,8 @@ Twitter Data Scrape
 
 Twitter Data Scrape with Profile Link without login to twitter.Scrapes Twitter Data Scrape with Profile Link like followers, total tweets, following , joined date etc.
 
+.. image:: images/twitter_analyzer.*
+
 Code
 ######
 .. tabs::
