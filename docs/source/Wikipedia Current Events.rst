@@ -4,6 +4,8 @@ Wikipedia Current Events
 
 Scrapes Wikipedia Current Events into title , description and link
 
+.. image:: images/wikipedia_current_events.*
+
 Code
 ######
 .. tabs::
