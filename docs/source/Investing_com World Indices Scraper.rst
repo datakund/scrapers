@@ -3,6 +3,8 @@ Investing.com World Indices Scraper
 
 Investing.com offers free real time quotes, portfolio, streaming charts, financial news, live stock market data and more. Investing.com World Indices Bot help to scrape the stock details of world indices from investing.com
 
+.. image:: images/investing_com_world_indices.*
+
 Code
 ######
 .. tabs::
