@@ -3,6 +3,8 @@ Trip Advisor Reviews Scraper
 
 Scrape reviews from Trip Advisor Link
 
+.. image:: images/trip_advisor_reviews.*
+
 Code
 ######
 .. tabs::
