@@ -2,6 +2,7 @@ Amazon Product Price Scraper Bot
 ********************************
 
 Any product that will appear in the search results page of Amazon. this bot Will scrape the price of all the products.
+
 .. image:: images/amazon_prices_scrape.*
 
 Code
