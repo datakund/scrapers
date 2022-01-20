@@ -2,6 +2,7 @@ Goodreads by Keyword Scraper
 ********************************
 
 Scrapes Books Information on Goodreads by Keyword
+.. image:: images/goodreads_keywords.*
 
 Code
 ######
