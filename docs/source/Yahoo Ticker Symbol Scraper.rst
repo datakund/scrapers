@@ -3,6 +3,8 @@ Yahoo Ticker Symbol Scraper
 
 Bot will visit finance.yahoo.com and scrape all the Ticker symbols with their respective prices
 
+.. image:: images/yahoo_ticker_symbol_downloader.*
+
 Code
 ######
 .. tabs::
