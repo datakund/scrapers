@@ -2,6 +2,7 @@ Gaana Scraper
 ****************
 
 Gaana Scraper extract data from gaana playlist
+
 .. image:: images/gaana_playlist.*
 
 Code
