@@ -3,6 +3,8 @@ IMDb Top 250 Movies Scraper
 
 IMDb is the world's most popular and authoritative source for movie, TV and celebrity content. Find ratings and reviews for the newest movie and TV shows. With the help of IMDb Top Movies Scraper you can scrape the title and rating of top 250 movies.
 
+.. image:: images/imdb_scrape_top_movies.*
+
 Code
 ######
 .. tabs::
