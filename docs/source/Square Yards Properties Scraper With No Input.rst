@@ -1,7 +1,10 @@
 Square Yards Properties Scraper With No Input
 ************************************************
-
 Bot will visit suareyard.com and scrape the price, location, name and link of square yard properties
+
+.. image:: images/square_yards_properties.*
+
+
 
 Code
 ######
