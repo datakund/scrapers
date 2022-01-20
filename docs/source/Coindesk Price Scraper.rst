@@ -2,6 +2,7 @@ Coindesk Price Scraper with Commodity Link
 ************************************************
 
 This bot helps to scrape price, price_24_changed, price_24_low, price_24_high with coin desk link
+
 .. image:: images/coindesk_bitcoin.*
 
 Code
