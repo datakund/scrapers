@@ -2,7 +2,7 @@ Bing Search Scraper
 ********************************
 
 Bing Search Scraper is a python library to scrape for a bing search result using browser automation.
-
+.. image:: images/bing_search_result_scraper.*
 Code
 ######
 .. tabs::
