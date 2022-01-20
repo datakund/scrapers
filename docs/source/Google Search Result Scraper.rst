@@ -2,6 +2,7 @@ Google Search Result Scraper
 ********************************
 
 Google Search Result Scraper is a python library to scrape for a google search result using browser automation
+
 .. image:: images/google_search_result_scraper.*
 
 Code
