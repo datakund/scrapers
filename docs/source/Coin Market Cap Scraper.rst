@@ -3,6 +3,8 @@ Coin Market Cap Scraper
 
 List of the dead. The following list details the number of deaths reported by companies in business premises at the World Trade Center. This Bot scrapes 9/11 Victim List, the names of all of those who lost their lives in the attacks.
 
+.. image:: images/coinmarketcap_data_scrape.*
+
 Code
 ######
 .. tabs::
