@@ -4,6 +4,8 @@ Worldometer COVID Stats Scraper
 Run the bot, enter the country name and click submit
 Bot will visit worldometer.info and scrape the COVID stats of that particular country.
 
+.. image:: images/worldometer_corona_countrywise.*
+
 Code
 ######
 .. tabs::
