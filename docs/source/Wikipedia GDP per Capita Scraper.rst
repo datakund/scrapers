@@ -2,6 +2,7 @@ Wikipedia GDP per Capita Scraper
 ********************************
 
 Extract Wikipedia GDP per Capita country wise using UN data and IMF Data  from Wikipedia
+.. image:: images/wikipedia_gdp_per_capita.*
 
 Code
 ######
